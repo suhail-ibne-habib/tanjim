@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 *,*::after,*::before{
@@ -34,17 +36,17 @@ img{
 
 .page{
   display: flex;
+  background-image: url(../src/assets/img/background.jpg);
+  position: relative;
 }
 
 .main{
   padding: 30px;
-  background-color: #fff;
   /* border: solid 1px #000; */
   width: 80vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../src/assets/img/background.jpg);
   position: relative;
 }
 
@@ -66,11 +68,14 @@ img{
 }
 
 .title{
-  color: var(--main-color);
   font-size: 3em;
   line-height: 1;
   font-weight: bold;
   color: #fff;
+}
+
+.title.colored{
+  color: var(--main-color);
 }
 
 .sub-title{
@@ -126,12 +131,25 @@ img{
   font-size: 4rem;
 }
 
-.clock-wrap{
-  background-color: #1BBC9B;
+.sidebar{
   padding-top: 50px;
   padding-bottom: 50px;
   width: 20vw;
+  background-color: transparent;
+  position: relative;
 }
+
+.sidebar.colored{
+  background-color: #1BBC9B;
+}
+
+.sidebar-float{
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+
+/* clock styling starts */
 
 .clock {
   position: relative;
@@ -186,11 +204,51 @@ img{
   margin-right: auto;
   position: relative;
   z-index: 1;
+  min-height: 1px;
+}
+
+.result.light{
+  background-color: #fff;
+}
+
+.box{
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 100%;
+}
+
+.box.light{
+  background-color: #fff;
+}
+
+/* Nav starts */
+.nav{
+  width: 100%;
+  padding: 20px 40px;
+}
+
+.lists{
+  display: flex;
+  justify-content:flex-end;
+  column-gap: 20px;
+  list-style: none;
+}
+
+.list a{
+  color: #000;
+  text-decoration: none;
+}
+
+.list a.active{
+  color: var(--main-color);
 }
 
 @media (max-width: 768px){
   .main{
       width: 100%;
+      padding: 20px !important;
   }
 
   .product-details{
@@ -209,4 +267,15 @@ img{
       flex-direction: column;
       align-items: start;
   }
+
+  .sidebar{
+    width: 100%;
+  }
+
+  .sidebar-float{
+    left: 50%;
+    transform: translatex(-50%);
+    bottom: 10px;
+  }
+
 }
