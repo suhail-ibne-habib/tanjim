@@ -40,6 +40,15 @@ img{
   position: relative;
 }
 
+.container{
+  max-width: 1920px;
+  width: 100%;
+}
+
+.flex{
+  display: flex;
+}
+
 .main{
   padding: 30px;
   /* border: solid 1px #000; */
@@ -154,7 +163,7 @@ img{
 .clock {
   position: relative;
   background-image: url('../src/assets/img//e-clock.png');
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   /* width: 20vw; */
   height: 500px;
@@ -163,8 +172,8 @@ img{
 
 .h-hand {
   position: absolute;
-  left: 48%;
-  top: 150px;
+  left: 45%;
+  top: 54px;
   background-image: url('../src/assets/img//hour.png');
   height: 105px;
   width: 27px;
@@ -173,20 +182,20 @@ img{
 }
 .m-hand {
   position: absolute;
-  left: 48%;
-  top: 80px;
+  left: 47%;
+  top: 59px;
   background-image: url('../src/assets/img//min.png');
-  height: 180px;
+  height: 100px;
   width: 20px;
   background-size: 20px 180px;
   transform-origin: 50% 95%;
 }
 .s-hand {
   position: absolute;
-  left: 48%;
-  top: 80px;
+  left: 45%;
+  top: 40px;
   background-image: url('../src/assets/img//sec-e.png');
-  height: 180px;
+  height: 120px;
   width: 30px;
   background-size: 30px 180px;
   transform-origin: 45% 95%;
@@ -211,12 +220,12 @@ img{
   background-color: #fff;
 }
 
-.box{
+.main > .box{
   padding: 30px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
   min-height: 100%;
+  gap: 20px;
 }
 
 .box.light{
@@ -248,6 +257,7 @@ img{
 .product-wrap{
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   flex-wrap: wrap;
   row-gap: 20px;
 }
@@ -281,7 +291,7 @@ img{
       font-size: 20px;
   }
 
-  .page{
+  .page, .flex{
       flex-direction: column;
   }
 
