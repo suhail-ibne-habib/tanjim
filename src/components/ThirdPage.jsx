@@ -1,9 +1,19 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
-import ProductImage from '../assets/img/product2.png';
-import PlaceHolder from '../assets/img/placeholder.png';
+import Product2 from './template/Product2';
+
+import PlaceHolder from '../assets/img/floating-img.jpg';
+
+import { getProduct2 } from '../data';
 
 export default function SecondPage(){
+
+    const [data, setData] = useState([])
+
+    useEffect(()=>{
+        setData(getProduct2())
+    }, [data])
+
     return(
         <>
             <div className="page full-screen background">
@@ -19,7 +29,13 @@ export default function SecondPage(){
                         <h3 className="sub-title">Lorem Ipsum is simply</h3>
                         <div className="line"></div>
                         <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, quis!</h3>
-                        <img src={ProductImage} alt="" />
+                        <div className="product-wrap">
+                            {data.map( item => {
+                                return(
+                                    <Product2 q={item.q} title={item.title} img={item.img} />
+                                )
+                            } )}
+                        </div>
                     </div>
                     
                 </div>
