@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 
-export default function Clock() {
+const ClockSVG = () => {
+
   const hHand = useRef();
   const mHand = useRef();
   const sHand = useRef();
@@ -28,12 +29,18 @@ export default function Clock() {
   }, []);
 
   return (
-    <>
-      {/* {<div class="clock">
-        <div ref={hHand} class="h-hand" id="hour"> </div>
-        <div ref={mHand} class="m-hand" id="min"> </div>
-        <div ref={sHand} class="s-hand" id="sec"> </div>
-      </div>} */}
-    </>
+    <div class="row">
+      <div class="column">
+        <div class="clock" data-timezone="Europe/Copenhagen">
+          <div class="clock-hands">
+            <div ref={hHand} class="hand hour-hand"></div>
+            <div ref={mHand} class="hand minute-hand"></div>
+            <div ref={sHand} class="hand second-hand"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
-}
+};
+
+export default ClockSVG;

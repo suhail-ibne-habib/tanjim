@@ -2,6 +2,7 @@ import Clock from "./Clock";
 import Boxes from "./Boxes";
 
 import PlaceHolder from '../assets/img/floating-img.jpg';
+import ClockSVG from "./template/ClockSVG";
 
 function FirstPage() {
   return (
@@ -11,7 +12,7 @@ function FirstPage() {
           <div className="sidebar colored">
             <h2 class="clock-title">text of the printing</h2>
             <div className="clock-wrap">
-              <Clock />
+              <ClockSVG />
             </div>
             <img className='sidebar-float' src={PlaceHolder} alt="" />
           </div>
