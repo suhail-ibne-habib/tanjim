@@ -19,6 +19,11 @@ export default function Nav() {
             Third Page
           </NavLink>
         </li>
+        <li className="list">
+          <NavLink activeClassName="active" to="/fourth-page">
+            Fourth Page
+          </NavLink>
+        </li>
       </ul>
     </div>
   );
