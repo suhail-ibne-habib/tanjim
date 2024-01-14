@@ -26,7 +26,12 @@ export default function Nav() {
         </li>
         <li className="list">
           <NavLink activeClassName="active" to="/fifth-page">
-            Fourth Page
+            Fifth Page
+          </NavLink>
+        </li>
+        <li className="list">
+          <NavLink activeClassName="active" to="/sixth-page">
+            Sixth Page
           </NavLink>
         </li>
       </ul>

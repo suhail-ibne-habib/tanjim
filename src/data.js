@@ -21,15 +21,15 @@ const product1 = [
     },
     {
         price: 5.387,
-        img: '/assets/imgs/washing.png'
+        img: '/assets/imgs/washingMachine.png'
     },
     {
         price: 2.122,
-        img: '/assets/imgs/fan.png'
+        img: '/assets/imgs/table-fan.png'
     },
     {
         price: 120,
-        img: '/assets/imgs/rectangle.png'
+        img: '/assets/imgs/stove.png'
     }
 ]
 

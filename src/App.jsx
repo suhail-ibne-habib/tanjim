@@ -5,6 +5,7 @@ import SecondPage from "./components/pages/SecondPage";
 import ThirdPage from "./components/pages/ThirdPage";
 import Fourth from "./components/pages/Fourth";
 import Fifth from './components/pages/Fifth'
+import Sixth from './components/pages/Sixth'
 import Nav from "./components/Nav";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/third-page" element={<ThirdPage />} />
         <Route path="/fourth-page" element={<Fourth />} />
         <Route path="/fifth-page" element={<Fifth />} />
+        <Route path="/sixth-page" element={<Sixth />} />
       </Routes>
     </Router>
 );
