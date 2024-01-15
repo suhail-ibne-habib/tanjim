@@ -224,7 +224,8 @@ img{
 
 .clock-title {
   color: #ffffff;
-  font-size: 14px;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 /* Additional CSS */

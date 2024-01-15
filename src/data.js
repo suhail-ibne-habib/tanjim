@@ -1,7 +1,7 @@
 
 const data = [
     {
-        title: 'Dagopbrengst',
+        title: 'Daily yield',
         speed: '107,73 kWh'
     },
     {
@@ -9,7 +9,22 @@ const data = [
         speed: '1.972,05 kWh'
     },
     {
-        title: 'Jaaropbrengst',
+        title: 'Annual yield',
+        speed: '28,37 MWh'
+    }
+]
+
+const frData = [
+    {
+        title: 'Rendement quotidien',
+        speed: '107,73 kWh'
+    },
+    {
+        title: 'Maandopbrengst',
+        speed: '1.972,05 kWh'
+    },
+    {
+        title: 'Rendement annuel',
         speed: '28,37 MWh'
     }
 ]
@@ -59,6 +74,10 @@ export function getProduct2(){
 
 export function getProduct1(){
     return product1;
+}
+
+export function getFrData(){
+    return frData;
 }
 
 export default function getData(){

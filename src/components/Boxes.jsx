@@ -5,9 +5,9 @@ import getCookies from '../hooks/getCookies';
 
 import Box from '../components/Box'
 
-import source from '../data'
+import source, {getFrData} from '../data'
 
-export default function Boxes(){
+export default function Boxes(props){
 
     const [data, setData] = useState([])
     const [cookieData, setCookieData] = useState([])
@@ -21,12 +21,17 @@ export default function Boxes(){
 
     useEffect( ()=>{
         if( cookieData.length === 0 ){
-            setData(source);
+            if( props.ln === "fr" ){
+                setData(getFrData);
+            }else{
+                setData(source)
+            }
+
             data.map( item=>{
                 return setCookie(item.title, item.speed)
             })
         }
-    }, [cookieData, data])
+    }, [cookieData, data, props.ln])
 
     return(
         <>

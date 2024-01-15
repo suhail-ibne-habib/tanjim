@@ -4,9 +4,9 @@ import Product from '../template/Product';
 
 import { getProduct1 } from '../../data';
 
-import PlaceHolder from '../../assets/img/floating-img.jpg';
+import PlaceHolder from '../../assets/img/fr/fr-floating.jpeg';
 
-export default function SecondPage(){
+export default function FrSecondPage(){
 
     const [data, setData] = useState([])
 
@@ -25,10 +25,10 @@ export default function SecondPage(){
                     
                     
                     <div className="box light">
-                        <h2 className="title colored">Green energy for household use</h2>
-                        <h3 className="sub-title">Facq, ready for the future</h3>
+                        <h2 className="title colored">L'énergie verte pour un usage domestique</h2>
+                        <h3 className="sub-title">Facq, prêt pour l'avenir</h3>
                         <div className="line"></div>
-                        <h2><strong>With the (107.73 kWh) solar energy generated today you can use the following household appliances for an hour:</strong></h2>
+                        <h2><strong>Avec l'énergie solaire (107,73 kWh) générée aujourd'hui, vous pouvez utiliser les appareils électroménagers suivants pendant une heure:</strong></h2>
                         <div className="product-wrap">
                             {data.map( item => {
                                 return(
