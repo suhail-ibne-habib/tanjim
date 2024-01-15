@@ -28,10 +28,23 @@ img{
   min-height: 100vh;
 }
 
+.wrap{
+  flex: 1;
+}
+
+.box-shadow{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
 .background{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+.bold{
+  font-weight: 900;
+  font-size: 25px;
 }
 
 .page{
@@ -47,6 +60,18 @@ img{
 
 .flex{
   display: flex;
+}
+
+.align-end{
+  align-items: flex-end !important;
+}
+
+.flex-direction-column{
+  flex-direction: column;
+}
+
+.justify-space-between{
+  justify-content: space-between;
 }
 
 .main{
@@ -278,6 +303,10 @@ body {
   min-height: 100%;
   gap: 20px;
   position: relative;
+}
+
+.main > .box.no-min-height{
+  min-height: auto;
 }
 
 .box.light{

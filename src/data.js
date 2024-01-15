@@ -52,17 +52,17 @@ const product2 = [
 
     {
         q: '109.879 l',
-        title: "Stookolie",
+        title: "Fuel oil",
         img: '/assets/imgs/stookoli.jpeg'
     },
     {
         q: '159.321 m^3',
-        title: 'Aardgas',
+        title: 'Natural gas',
         img: '/assets/imgs/gas.jpeg'
     },
     {
         q: '113 t',
-        title: 'Steenkool',
+        title: 'Coal',
         img: '/assets/imgs/chula.jpeg'
     }
 

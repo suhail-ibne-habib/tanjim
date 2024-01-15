@@ -9,7 +9,7 @@ function FirstPage() {
       <div className="page full-screen background">
         <div className="container flex">
           <div className="sidebar colored">
-            <h2 class="clock-title">This building produces solar energy</h2>
+            <h2 class="clock-title bold mb-5">This building produces solar energy</h2>
             <div className="clock-wrap">
               <ClockSVG />
             </div>
