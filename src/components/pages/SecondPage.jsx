@@ -28,7 +28,7 @@ export default function SecondPage(){
                         <h2 className="title colored">Green energy for household use</h2>
                         <h3 className="sub-title">Facq, ready for the future</h3>
                         <div className="line"></div>
-                        <h2><strong>With the (107.73 kWh) solar energy generated today you can use the following household appliances for an hour:</strong></h2>
+                        <h2 className='box-para'><strong>With the (107.73 kWh) solar energy generated today you can use the following household appliances for an hour:</strong></h2>
                         <div className="product-wrap">
                             {data.map( item => {
                                 return(
@@ -36,7 +36,7 @@ export default function SecondPage(){
                                 )
                             } )}
                         </div>
-                        <p className="copyright">@solarfox</p>
+                        <p className="copyright">&copy;solarfox</p>
                     </div>
                     
                 </div>
