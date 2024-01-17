@@ -13,7 +13,7 @@ export default function Fourth(){
                 <div className="sidebar">
                     <img className='sidebar-float' src={PlaceHolder} alt="" />
                 </div>
-                <div className="main" style={{paddingLeft: 0, paddingRight: "100px", paddingBottom: "60px"}}>
+                <div className="main">
                     
                     
                     <div className="box light" style={{height: "85vh"}}>

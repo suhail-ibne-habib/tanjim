@@ -13,10 +13,10 @@ export default function Fourth(){
                 <div className="sidebar">
                     <img className='sidebar-float' src={PlaceHolder} alt="" />
                 </div>
-                <div className="main" style={{paddingLeft: 0, paddingRight: "100px", justifyContent: 'flex-end'}}>
+                <div className="main">
                     
                     
-                    <div className="box box-shadow light" style={{ minHeight: "73vh", borderRadius: "12px", width: "82%", alignSelf: "center"}}>
+                    <div className="box box-shadow light">
                         <h2 className="title colored">Green electricity for the region</h2>
                         <h3 className="sub-title">Facq, ready for the future</h3>
                         <div className="line"></div>

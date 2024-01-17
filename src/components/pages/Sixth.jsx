@@ -10,14 +10,13 @@ export default function Sixth(){
         <>
             <div className="page full-screen background">
                 <div class="shadow"></div>
-                {/* <div className="sidebar">
-                </div> */}
-                <div className="main full">
-                    <div className="wrap sidebar-float flex" style={{alignItems: "flex-end", left: "6vw", transform: "translateX(0)"}}>
+                <div className="sidebar">
+                    <div className="wrap sidebar-float flex">
                         <img src={PlaceHolder} alt="" />
-                        <p className='mb-2'>I of the earth 40.074</p>
                     </div>
-                    <div className="box light" style={{width: "90vw", marginLeft: "auto", height: "100vh"}}>
+                </div>
+                <div className="main">
+                    <div className="box light">
                         <h2 className="title colored">Avoided CO&#8322; emissions</h2>
                         <h3 className="sub-title">This building produces solar energy!</h3>
                         <div className="line"></div>
@@ -35,6 +34,8 @@ export default function Sixth(){
                             </div>
 
                         </div>
+
+                        <p className='mb-2'>I of the earth 40.074</p>
                         
                         <p className="copyright">&copy;solarfox</p>
                     </div>

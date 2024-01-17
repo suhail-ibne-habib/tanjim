@@ -16,7 +16,7 @@ export default function SecondPage(){
 
     return(
         <>
-            <div className="page align-end full-screen background">
+            <div className="page full-screen background">
                 <div class="shadow"></div>
                 <div className="sidebar">
                     <img className='sidebar-float' src={PlaceHolder} alt="" />
@@ -28,8 +28,7 @@ export default function SecondPage(){
                         <h2 className="title colored">Avoided CO&sup2; emissions</h2>
                         <h3 className="sub-title">This building produces solar energy!</h3>
                         <div className="line"></div>
-                        <h3 className="bold">Avoided CO&sup2; emissions since 30.11.2021:<br></br>
-319t; this is equivalent to:</h3>
+                        <h3 className="bold">Avoided CO&sup2; emissions since 30.11.2021:<br></br>319t; this is equivalent to:</h3>
                         <div className="product-wrap" style={{alignItems: "flex-end"}}>
                             {data.map( item => {
                                 return(
