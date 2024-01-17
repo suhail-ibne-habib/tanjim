@@ -21,14 +21,14 @@ export default function SecondPage(){
                 <div className="sidebar">
                     <img className='sidebar-float' src={PlaceHolder} alt="" />
                 </div>
-                <div className="main align-end" style={{paddingLeft: 0}}>
+                <div className="main align-end">
                     
                     
                     <div className="box light">
-                        <h2 className="title colored">Avoided CO&sup2; emissions</h2>
+                        <h2 className="title colored">Avoided CO&#8322; emissions</h2>
                         <h3 className="sub-title">This building produces solar energy!</h3>
                         <div className="line"></div>
-                        <h3 className="bold">Avoided CO&sup2; emissions since 30.11.2021:<br></br>319t; this is equivalent to:</h3>
+                        <h3 className="bold">Avoided CO&#8322; emissions since 30.11.2021:<br></br>319t; this is equivalent to:</h3>
                         <div className="product-wrap" style={{alignItems: "flex-end"}}>
                             {data.map( item => {
                                 return(

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import PlaceHolder from '../../assets/img/floating-img.jpg';
+import PlaceHolder from '../../assets/img/nl/nl-floating.jpeg';
 import Tree from '../../assets/img/tree.png'
 
 
-export default function Fourth(){
+export default function NlFourthPage(){
 
     return(
         <>
@@ -18,22 +18,22 @@ export default function Fourth(){
                     
                     <div className="box light">
                         
-                        <h2 className="title colored">Avoided CO&#8322; emissions </h2>
-                        <h3 className="sub-title">This building produces solar energy!</h3>
+                        <h2 className="title colored">ÉVermeden CO&#8322; uitstoot</h2>
+                        <h3 className="sub-title">Dit gebouw produceert zonne-energie!</h3>
                         <div className="line"></div>
                         
                         <div className="wrap flex flex-direction-column justify-content-between flex-1">
                             <div className="row">
                                 <div className="col-xs-12 col-sm-6">
-                                    <h3 className='mb-5 bold'>Total amount of CO&#8322; saved: 319 t</h3>
-                                    <h3>25,491 trees would have to be planted to remove the same amount of CO&#8322; from the air in 10 years.</h3>
+                                    <h3 className='mb-5 bold'>Totaal bespaarde hoeveelheid CO&#8322;: 319 t</h3>
+                                    <h3>Er zouden 25.491 bomen moeten worden geplant om dezelfde hieveelheid CO&#8322; uit de lucht te verwijderen in de komonde 10 jaar.</h3>
                                 </div>
                                 <div className="col-xs-12 col-sm-6 text-center">
                                     <img style={{width: "80%"}} src={Tree} alt="" />
                                 </div>
                             </div>
 
-                            <p className="box-note">100m&sup2; of forest, with 80 trees, removes approximately one ton of CO&#8322; from the air in a year</p>
+                            <p className="box-note">100m&sup2; bos, met 80 bomen, verwijdert in een jaar ongevver een ton CO2 uit de lucht</p>
                         </div>
                         
 

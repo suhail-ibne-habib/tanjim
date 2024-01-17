@@ -18,6 +18,7 @@ const useApiData = (URL) => {
             speed: `${speed} ${title === 'yearly' ? 'MWh' : 'kWh'}`
           }));
           setData(formattedData);
+          console.log(formattedData)
         }
         setLoading(false); // Move setLoading(false) outside the conditional block
       })

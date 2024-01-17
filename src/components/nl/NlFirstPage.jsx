@@ -1,15 +1,15 @@
 import Boxes from "../Boxes";
 import ClockSVG from "../template/ClockSVG";
 
-import PlaceHolder from '../../assets/img/fr/fr-floating.jpeg';
+import PlaceHolder from '../../assets/img/nl/nl-floating.jpeg';
 
-function FrFirstPage() {
+function NlFirstPage() {
   return (
     <>
       <div className="page full-screen background">
         <div className="container flex">
           <div className="sidebar colored">
-            <h2 class="clock-title">Ce bâtiment produit de l'énergie solaire</h2>
+            <h2 class="clock-title">Dit gebouw produceert zonne-energie</h2>
             <div className="clock-wrap">
               <ClockSVG />
             </div>
@@ -19,9 +19,9 @@ function FrFirstPage() {
               <div class="shadow"></div>
               
               <div class="result">
-                  <h2 class="title">L'énergie du soleil</h2>
+                  <h2 class="title">Energie van zonlicht</h2>
                   <div class="space-50"></div>
-                  <Boxes ln="fr"/>
+                  <Boxes ln="nl"/>
               </div>
           </div>
         </div>
@@ -30,4 +30,4 @@ function FrFirstPage() {
   );
 }
 
-export default FrFirstPage;
+export default NlFirstPage;

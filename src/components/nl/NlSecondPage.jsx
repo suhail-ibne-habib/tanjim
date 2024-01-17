@@ -4,9 +4,9 @@ import Product from '../template/Product';
 
 import { getProduct1 } from '../../data';
 
-import PlaceHolder from '../../assets/img/floating-img.jpg';
+import PlaceHolder from '../../assets/img/nl/nl-floating.jpeg';
 
-export default function SecondPage(){
+export default function NlSecondPage(){
 
     const [data, setData] = useState([])
 
@@ -25,10 +25,10 @@ export default function SecondPage(){
                     
                     
                     <div className="box light">
-                        <h2 className="title colored">Green energy for household use</h2>
-                        <h3 className="sub-title">Facq, ready for the future</h3>
+                        <h2 className="title colored">Groene stroom voor huishoudelijk gebruik</h2>
+                        <h3 className="sub-title">Facq, klaar voor de toekomst</h3>
                         <div className="line"></div>
-                        <h2 className='box-para'><strong>With the (107.73 kWh) solar energy generated today you can use the following household appliances for an hour:</strong></h2>
+                        <h2><strong>Met de (107,73 kWh) vandaag opgewekte zonne-energie kunt u volgende huishoudelijke apparaten een uur gebruiken:</strong></h2>
                         <div className="product-wrap">
                             {data.map( item => {
                                 return(
@@ -36,7 +36,7 @@ export default function SecondPage(){
                                 )
                             } )}
                         </div>
-                        <p className="copyright">&copy;solarfox</p>
+                        <p className="copyright">@solarfox</p>
                     </div>
                     
                 </div>

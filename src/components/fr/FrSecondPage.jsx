@@ -21,7 +21,7 @@ export default function FrSecondPage(){
                 <div className="sidebar">
                     <img className='sidebar-float' src={PlaceHolder} alt="" />
                 </div>
-                <div className="main" style={{paddingLeft: 0}}>
+                <div className="main">
                     
                     
                     <div className="box light">

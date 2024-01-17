@@ -1,38 +1,39 @@
 import React, {useState, useEffect} from 'react';
 
-import Product from '../template/Product';
+import Product2 from '../template/Product2';
 
-import { getProduct1 } from '../../data';
+import PlaceHolder from '../../assets/img/nl/nl-floating.jpeg';
 
-import PlaceHolder from '../../assets/img/floating-img.jpg';
+import { getProduct2 } from '../../data';
 
-export default function SecondPage(){
+export default function NlThirdPage(){
 
     const [data, setData] = useState([])
 
     useEffect(()=>{
-        setData(getProduct1())
+        setData(getProduct2())
     }, [data])
 
     return(
         <>
             <div className="page full-screen background">
-                <div className="shadow"></div>
+                <div class="shadow"></div>
                 <div className="sidebar">
                     <img className='sidebar-float' src={PlaceHolder} alt="" />
                 </div>
-                <div className="main">
+                <div className="main align-end">
                     
                     
                     <div className="box light">
-                        <h2 className="title colored">Green energy for household use</h2>
-                        <h3 className="sub-title">Facq, ready for the future</h3>
+                        <h2 className="title colored">Vermeden CO&#8322; uitstoot</h2>
+                        <h3 className="sub-title">Dit gebouw produceert zonne-energie!</h3>
                         <div className="line"></div>
-                        <h2 className='box-para'><strong>With the (107.73 kWh) solar energy generated today you can use the following household appliances for an hour:</strong></h2>
-                        <div className="product-wrap">
+                        <h3 className="bold">Vermeden CO&#8322; uitstoot sinds 30.11.2021:<br></br>
+                            319 t; dit staat gelijik aan:</h3>
+                        <div className="product-wrap" style={{alignItems: "flex-end"}}>
                             {data.map( item => {
                                 return(
-                                    <Product price={item.price} img={item.img} />
+                                    <Product2 q={item.q} title={item.title} img={item.img} />
                                 )
                             } )}
                         </div>

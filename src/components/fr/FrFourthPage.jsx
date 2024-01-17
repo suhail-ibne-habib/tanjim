@@ -1,10 +1,10 @@
 import React from 'react';
 
-import PlaceHolder from '../../assets/img/floating-img.jpg';
+import PlaceHolder from '../../assets/img/fr/fr-floating.jpeg';
 import Tree from '../../assets/img/tree.png'
 
 
-export default function Fourth(){
+export default function FrFourthPage(){
 
     return(
         <>
@@ -18,22 +18,22 @@ export default function Fourth(){
                     
                     <div className="box light">
                         
-                        <h2 className="title colored">Avoided CO&#8322; emissions </h2>
-                        <h3 className="sub-title">This building produces solar energy!</h3>
+                        <h2 className="title colored">Émissions de CO&#8322; évitées</h2>
+                        <h3 className="sub-title">Ce bâtiment produit de l'énergie solaire !</h3>
                         <div className="line"></div>
                         
                         <div className="wrap flex flex-direction-column justify-content-between flex-1">
                             <div className="row">
                                 <div className="col-xs-12 col-sm-6">
-                                    <h3 className='mb-5 bold'>Total amount of CO&#8322; saved: 319 t</h3>
-                                    <h3>25,491 trees would have to be planted to remove the same amount of CO&#8322; from the air in 10 years.</h3>
+                                    <h3 className='mb-5 bold'>Quantité totale de CO&#8322; économisée : 319 t</h3>
+                                    <h3>Il faudrait planter 25 491 arbres pour éliminer la même quantité de CO&#8322; de l’air en 10 ans.</h3>
                                 </div>
                                 <div className="col-xs-12 col-sm-6 text-center">
                                     <img style={{width: "80%"}} src={Tree} alt="" />
                                 </div>
                             </div>
 
-                            <p className="box-note">100m&sup2; of forest, with 80 trees, removes approximately one ton of CO&#8322; from the air in a year</p>
+                            <p className="box-note">100 m&sup2; de forêt, avec 80 arbres, éliminent environ une tonne de CO2 de l'air en un an</p>
                         </div>
                         
 

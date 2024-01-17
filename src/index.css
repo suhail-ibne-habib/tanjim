@@ -22,7 +22,7 @@ body {
 /* Fonts starts */
 
 h3{
-  font-size: clamp( 20px, 35px, 45px );
+  font-size: clamp( 1rem, 1.5rem, 2rem );
 }
 
 h4{
@@ -30,7 +30,7 @@ h4{
 }
 
 p{
-  font-size: clamp(20px, 25px, 35px);
+  font-size: clamp(0.8rem, 1rem, 1.2rem);
 }
 
 /* Global classes starts */
@@ -110,7 +110,7 @@ img{
 .main{
   padding: 30px;
   width: 80vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -396,7 +396,7 @@ body {
 }
 
 .product-img img{
-  width: 70%;
+  width: 50%;
 }
 
 .product-q{
@@ -555,5 +555,14 @@ body {
   .clock {
     width: 300px;
     height: 300px;
+  }
+}
+
+@media (max-width: 1600px) and (max-height: 800px){
+  .sidebar-float{
+    width: 38%;
+  }
+  img.house-img, img.car-globe {
+    width: 60% !important;
   }
 }

@@ -2,30 +2,36 @@
 const data = [
     {
         title: 'Daily yield',
-        speed: '107,73 kWh'
     },
     {
-        title: 'Maandopbrengst',
-        speed: '1.972,05 kWh'
+        title: 'Monthly yield',
     },
     {
         title: 'Annual yield',
-        speed: '28,37 MWh'
     }
 ]
 
 const frData = [
     {
         title: 'Rendement quotidien',
-        speed: '107,73 kWh'
     },
     {
         title: 'Maandopbrengst',
-        speed: '1.972,05 kWh'
     },
     {
         title: 'Rendement annuel',
-        speed: '28,37 MWh'
+    }
+]
+
+const NlData = [
+    {
+        title: 'Dagopbrengst',
+    },
+    {
+        title: 'Maandopbrengst',
+    },
+    {
+        title: 'Jaaropbrengst',
     }
 ]
 
@@ -56,7 +62,7 @@ const product2 = [
         img: '/assets/imgs/stookolie.png'
     },
     {
-        q: '159.321 m^3',
+        q: `159.321 m&sup3;`,
         title: 'Natural gas',
         img: '/assets/imgs/Aardgas.png'
     },
@@ -80,6 +86,10 @@ export function getFrData(){
     return frData;
 }
 
-export default function getData(){
+export function getNlData(){
+    return NlData;
+}
+
+export function getData(){
     return data;
 }
