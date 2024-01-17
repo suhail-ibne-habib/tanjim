@@ -1,65 +1,40 @@
-import React,{useEffect, useState} from 'react';
-
-import axios from 'axios';
-
+import React, { useEffect, useState } from 'react';
+import useApiData from '../hooks/useApiData';
 import setCookie from '../hooks/setCookie';
 import getCookies from '../hooks/getCookies';
+import Box from '../components/Box';
+import source, { getFrData } from '../data';
 
-import Box from '../components/Box'
+const URL = "https://uatapi.display-anywhere.com/api/getenergysummary";
 
-import source, {getFrData} from '../data'
+export default function Boxes(props) {
+  const { data, loading, error } = useApiData(URL);
+  const [cookieData, setCookieData] = useState([]);
 
-export default function Boxes(props){
+  useEffect(() => {
+    setCookieData(getCookies());
+  }, []);
 
-    const [result, setResult] = useState([]);
-    const [error, setError] = useState(null);
-    const [cookieData, setCookieData] = useState([])
+  useEffect(() => {
+    if (cookieData.length === 0 && !loading) {
+        const result = (props.ln === "fr") ? getFrData : data;
+  
+        result.map(item => {
+          return setCookie(item.title, item.speed);
+        });
+  
+        setCookieData(result); // Update cookieData after setting the cookies
+    }
+  }, [cookieData, data, loading, props.ln]);
 
-    useEffect(()=>{
-        axios.post("https://uatapi.display-anywhere.com/api/getenergysummary")
-        .then(resp => {
-            if (resp.status === 200) {
-                const res = JSON.parse(resp.data.data)
-                
-                const formattedData = Object.entries(res[0]).map(([title, speed]) => ({
-                    title: title.charAt(0).toUpperCase() + title.slice(1), // Capitalize the first letter
-                    speed: `${speed} ${title === 'yearly' ? 'MWh' : 'kWh'}`
-                }));
-                setResult(formattedData)
-            }
-
-        })
-        .catch(error => setError(error))
-        
-    }, [])
-
-    useEffect(()=>{
-        const cookieArray = getCookies();
-        setCookieData(cookieArray);
-
-    }, [])
-
-    useEffect( ()=>{
-        if( cookieData.length === 0 ){
-            if( props.ln === "fr" ){
-                setResult(getFrData);
-            }else{
-                setResult(result)
-            }
-
-            result.map( item=>{
-                return setCookie(item.title, item.speed)
-            })
-        }
-    }, [cookieData, result, props.ln])
-
-    return(
-        <>
-            <div className="grid-3" id="boxes">
-                {cookieData.map((item, idx)=>{
-                    return <Box key={idx} title={item.title} speed={item.speed} />
-                })}
-            </div>
-        </>
-    )
+  return (
+    <>
+      <div className="grid-3" id="boxes">
+        {loading && cookieData.length === 0 && <h1>Loading...</h1>}
+        {cookieData.map((item, idx) => {
+          return <Box key={idx} title={item.title} speed={item.speed} />;
+        })}
+      </div>
+    </>
+  );
 }
