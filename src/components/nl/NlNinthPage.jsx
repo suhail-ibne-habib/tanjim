@@ -8,14 +8,14 @@ import useChart from '../../hooks/useChart';
 
 const URL = "https://uatapi.display-anywhere.com/api/GetEnergyYearWiseChart"
 
-export default function Ninth(){
+export default function NlNinth(){
 
         const chartOptions = {
             id: 'seventh-page',
             colors: ["#ffd800", "transparent"],
             width: '100%',
             enabled: false,
-            name: 'This building produces solar energy!)',
+            name: 'Stroomopbrengst (Facq Zaventem showroo...)',
         }
         
         const { data, loading, error } = useApiData(URL);
@@ -32,8 +32,8 @@ export default function Ninth(){
                     </div>
                     <div className="main">
                         <div className="box light">
-                            <h2 className="title colored">Avoided CO<sub>2</sub> emissions: 280.21 t</h2>
-                            <h3 className="sub-title">Facq goes for renewable energy</h3>
+                            <h2 className="title colored">Vermeden Co<sub>2</sub> uitstoot: 280,21 t</h2>
+                            <h3 className="sub-title">Facq gaat voor hernieuwbare energie</h3>
                             <div className="line"></div>
                             <div className="wrap flex align-center">
 

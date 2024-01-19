@@ -15,7 +15,7 @@ export default function Seventh(){
             colors: ["#ffd800", "transparent"],
             width: '100%',
             enabled: false,
-            name: 'This building produces solar energy!)',
+            name: 'Power output)',
         }
 
         const { data, loading, error } = useApiData(URL);
@@ -32,8 +32,8 @@ export default function Seventh(){
                     </div>
                     <div className="main">
                         <div className="box light">
-                            <h2 className="title colored">Avoided CO&#8322; emissions: 280.21 t</h2>
-                            <h3 className="sub-title">Annual overview</h3>
+                            <h2 className="title colored">Monthly overview</h2>
+                            <h3 className="sub-title">This building produces solar energy!</h3>
                             <div className="line"></div>
                             <div className="wrap flex align-center">
 
