@@ -37,7 +37,7 @@ export default function Seventh(){
                             <div className="line"></div>
                             <div className="wrap flex align-center">
 
-                            {series.length > 0 && <Chart options={options} series={series} type="bar" width={"100%"} height={'320'} /> }  
+                            {!loading && <Chart options={options} series={series} type="bar" width={"100%"} height={'320'} /> }  
 
                             </div>
                             

@@ -10,9 +10,10 @@ export default function useChart(data, loading, chartOptions){
         if (!loading) {
             let optionsData = [];
             let seriesData = [];
-            data.map(({ day, value }) => {
-                optionsData.push(day);
-                seriesData.push(value);
+            data.map((entry) => {
+                const keys = Object.keys(entry);
+                optionsData.push(entry[keys[0]]);
+                seriesData.push(entry[keys[1]]);
                 return null;
             })
             setOptionsData(optionsData)

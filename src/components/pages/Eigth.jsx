@@ -6,7 +6,7 @@ import PlaceHolder from '../../assets/img/floating-img.jpg';
 import useApiData from '../../hooks/useChartData';
 import useChart from '../../hooks/useChart';
 
-const URL = "https://uatapi.display-anywhere.com/api/GetEnergyMonthChart"
+const URL = "https://uatapi.display-anywhere.com/api/GetEnergyMonthWiseChart"
 
 export default function Eigth(){
 
@@ -37,7 +37,7 @@ export default function Eigth(){
                             <div className="line"></div>
                             <div className="wrap flex align-center">
 
-                                {series.length > 0 && <Chart options={options} series={series} type="bar" width={"100%"} height={'320'} /> }    
+                                {!loading && <Chart options={options} series={series} type="bar" width={"100%"} height={'320'} /> }    
 
                             </div>
                             
