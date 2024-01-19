@@ -5,10 +5,10 @@ import Chart from 'react-apexcharts'
 import PlaceHolder from '../../assets/img/floating-img.jpg';
 import useApiData from '../../hooks/useChartData';
 
-const URL = "https://uatapi.display-anywhere.com/api/GetEnergyMonthChart"
+const URL = "https://uatapi.display-anywhere.com/api/GetEnergyYearWiseChart"
 
-export default function Eigth(){
-
+export default function Ninth(){
+        
         const [optionsData, setOptionsData] = useState([])
         const [seriesData, setSeriesData] = useState([])
 
@@ -21,8 +21,8 @@ export default function Eigth(){
                 let seriesData = [];
                 const chart = [
                     // ["Year", "Power output (Facq Zaventem showroom...)"],
-                    ...data.map(({ day, value }) => {
-                        optionsData.push(day);
+                    ...data.map(({ year, value }) => {
+                        optionsData.push(year);
                         seriesData.push(value);
                     }),
                 ];
@@ -35,16 +35,12 @@ export default function Eigth(){
 
         const options = {
             chart: {
-              id: 'eigth-page',
-              width: "100%"
+              id: 'ninth-page'
             },
             xaxis: {
                 categories: optionsData
             },
-            colors: ["#ffd800", "transparent"],
-            dataLabels: {
-                enabled: false
-            }
+            colors: ["#ffd800", "transparent"]
         }
         const series = [
             {
@@ -68,12 +64,12 @@ export default function Eigth(){
                     </div>
                     <div className="main">
                         <div className="box light">
-                            <h2 className="title colored">Avoided CO&#8322; emissions: 280.21 t</h2>
+                            <h2 className="title colored">Avoided CO2 emissions: 280.21 t</h2>
                             <h3 className="sub-title">Facq goes for renewable energy</h3>
                             <div className="line"></div>
                             <div className="wrap">
 
-                                {seriesData.length > 0 && <Chart options={options} series={series} type="bar" width={"100%"} height={'320'} /> }    
+                                {seriesData.length > 0 && <Chart options={options} series={series} type="bar" width={"100%"} height={'320'} /> }
 
                             </div>
                             

@@ -6,7 +6,7 @@ import PlaceHolder from '../../assets/img/floating-img.jpg';
 import useApiData from '../../hooks/useChartData';
 
 const options = {
-    title: "AThis building produces solar energy!",
+    title: "This building produces solar energy!",
     seriesType: "bars",
     series: { 1: { type: "line" } },
     backgroundColor: {
