@@ -4,54 +4,22 @@ import Chart from 'react-apexcharts'
 
 import PlaceHolder from '../../assets/img/floating-img.jpg';
 import useApiData from '../../hooks/useChartData';
+import useChart from '../../hooks/useChart';
 
 const URL = "https://uatapi.display-anywhere.com/api/GetEnergyYearWiseChart"
 
 export default function Ninth(){
-        
-        const [optionsData, setOptionsData] = useState([])
-        const [seriesData, setSeriesData] = useState([])
 
-        // Your component code
-        const { data, loading, error } = useApiData(URL);
-
-        useEffect(() => {
-            if (!loading) {
-                let optionsData = [];
-                let seriesData = [];
-                const chart = [
-                    // ["Year", "Power output (Facq Zaventem showroom...)"],
-                    ...data.map(({ year, value }) => {
-                        optionsData.push(year);
-                        seriesData.push(value);
-                    }),
-                ];
-                setOptionsData(optionsData)
-                setSeriesData(seriesData)
-            }
-
-            return(()=>{})
-        }, [loading, data]);
-
-        const options = {
-            chart: {
-              id: 'ninth-page'
-            },
-            xaxis: {
-                categories: optionsData
-            },
-            colors: ["#ffd800", "transparent"]
+        const chartOptions = {
+            id: 'seventh-page',
+            colors: ["#ffd800", "transparent"],
+            width: '100%',
+            enabled: false,
+            name: 'This building produces solar energy!)',
         }
-        const series = [
-            {
-                name: 'Power output (Facq Zaventem showroom...)',
-                data: seriesData
-            },
-            {
-                name: '',
-                data: []
-            }
-        ]
+        
+        const { data, loading, error } = useApiData(URL);
+        const {options, series } = useChart(data, loading, chartOptions);
 
         return(
             <>
@@ -67,9 +35,9 @@ export default function Ninth(){
                             <h2 className="title colored">Avoided CO2 emissions: 280.21 t</h2>
                             <h3 className="sub-title">Facq goes for renewable energy</h3>
                             <div className="line"></div>
-                            <div className="wrap">
+                            <div className="wrap flex align-center">
 
-                                {seriesData.length > 0 && <Chart options={options} series={series} type="bar" width={"100%"} height={'320'} /> }
+                                {series.length > 0 && <Chart options={options} series={series} type="bar" width={"100%"} height={'320'} /> }
 
                             </div>
                             

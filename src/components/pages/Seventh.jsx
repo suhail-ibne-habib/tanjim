@@ -1,44 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
-import { Chart } from 'react-google-charts';
+import Chart from 'react-apexcharts'
 
 import PlaceHolder from '../../assets/img/floating-img.jpg';
 import useApiData from '../../hooks/useChartData';
+import useChart from '../../hooks/useChart';
 
-const options = {
-    title: "This building produces solar energy!",
-    seriesType: "bars",
-    series: { 1: { type: "line" } },
-    backgroundColor: {
-        fill: 'rgba(255, 255, 255, 0.1)',
-        fillOpacity: 0.1
-    },
-    colors: ['#ffd800'],
-};
-
-const URL = "https://uatapi.display-anywhere.com/api/GetEnergyMonthWiseChart"
+const URL = "https://uatapi.display-anywhere.com/api/GetEnergyMonthChart"
 
 export default function Seventh(){
-        
-        const [chartData, setChartData] = useState([])
 
-        // Your component code
+        const chartOptions = {
+            id: 'seventh-page',
+            colors: ["#ffd800", "transparent"],
+            width: '100%',
+            enabled: false,
+            name: 'This building produces solar energy!)',
+        }
+
         const { data, loading, error } = useApiData(URL);
-
-        useEffect(() => {
-            if (!loading) {
-                const chart = [
-                    ["Month", "Power output (Facq Zaventem showroom...)"],
-                    ...data.map(({ month, value }) => [month.toString(), value]),
-                ];
-                setChartData(chart);
-            }
-        }, [loading, data]);
-
-        useEffect(() => {
-            console.log(chartData);
-          }, [chartData]);
-
+        const {options, series } = useChart(data, loading, chartOptions);
 
         return(
             <>
@@ -54,17 +35,9 @@ export default function Seventh(){
                             <h2 className="title colored">Avoided CO&#8322; emissions: 280.21 t</h2>
                             <h3 className="sub-title">Annual overview</h3>
                             <div className="line"></div>
-                            <div className="wrap">
+                            <div className="wrap flex align-center">
 
-                                { chartData && <Chart
-                                                chartType="ComboChart"
-                                                width="100%"
-                                                min-height="50vh"
-                                                data={chartData}
-                                                options={options}
-                                            />
-
-                                }
+                            {series.length > 0 && <Chart options={options} series={series} type="bar" width={"100%"} height={'320'} /> }  
 
                             </div>
                             

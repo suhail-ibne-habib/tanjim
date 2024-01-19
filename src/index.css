@@ -48,8 +48,13 @@ img{
   flex: 1;
 }
 
+#apexchartseigth-page{
+  width: 100%;
+}
+
 .wrap > div{
   height: 50vh;
+  width: 100%;
 }
 
 .box-shadow{
@@ -87,6 +92,10 @@ img{
 
 .flex-1{
   flex: 1;
+}
+
+.align-center{
+  align-items: center !important;
 }
 
 .align-end{

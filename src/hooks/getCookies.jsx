@@ -1,4 +1,3 @@
-import React from 'react';
 import Cookie from 'js-cookie'
 
 export default function getCookies(){
