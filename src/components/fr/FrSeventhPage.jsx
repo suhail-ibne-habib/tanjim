@@ -1,51 +1,54 @@
 import React from 'react';
-
 import Chart from 'react-apexcharts'
-
-import PlaceHolder from '../../assets/img/floating-img.jpg';
+import Sidebar from "../template/Sidebar";
+import Copyright from '../template/Copyright';
 import useApiData from '../../hooks/useChartData';
 import useChart from '../../hooks/useChart';
+
+import PlaceHolder from '../../assets/img/floating-img.jpg';
 
 const URL = "https://uatapi.display-anywhere.com/api/GetEnergyMonthChart"
 
 export default function FrSeventh(){
 
-        const chartOptions = {
-            id: 'seventh-page',
-            colors: ["#ffd800", "transparent"],
-            width: '100%',
-            enabled: false,
-            name: 'Puissance de sortie)',
-        }
+    const chartOptions = {
+        id: 'seventh-page',
+        colors: ["#ffd800", "transparent"],
+        width: '100%',
+        enabled: false,
+        name: 'Power output)',
+    }
 
-        const { data, loading, error } = useApiData(URL);
-        const {options, series } = useChart(data, loading, chartOptions);
+    const { data, loading, error } = useApiData(URL);
+    const {options, series } = useChart(data, loading, chartOptions);
 
-        return(
-            <>
-                <div className="page full-screen background">
-                    <div className="shadow"></div>
-                    <div className="sidebar">
-                        <div className="wrap sidebar-float flex">
-                            <img src={PlaceHolder} alt="" />
-                        </div>
-                    </div>
-                    <div className="main">
+    return(
+        <>
+            <div className="page full-screen background">
+                <div className="shadow"></div>
+                <div className="grid">
+                    <Sidebar title="" placeholder={PlaceHolder} />
+                    <div className="page__content">
+
                         <div className="box light">
-                            <h2 className="title colored">Aperçu mensuel</h2>
-                            <h3 className="sub-title">Ce bâtiment produit de l'énergie solaire !</h3>
-                            <div className="line"></div>
-                            <div className="wrap flex align-center">
+                            <div className="box__header">
+                                <h2 className="title colored">Aperçu mensuel</h2>
+                                <h3 className="sub-title">Ce bâtiment produit de l'énergie solaire !</h3>
+                                <div className="line"></div>                                    
+                            </div>
+                            <div className="wrap align-center">
 
                             {!loading && <Chart options={options} series={series} type="bar" width={"100%"} height={'320'} /> }  
 
                             </div>
-                            
+                            <Copyright />
                         </div>
-                        
+
                     </div>
                 </div>
-            </>
-        )
+
+            </div>
+        </>
+    )
 
 }

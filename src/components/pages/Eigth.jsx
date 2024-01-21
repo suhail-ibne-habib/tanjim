@@ -1,8 +1,7 @@
 import React from 'react';
-
+import Sidebar from "../template/Sidebar";
+import Copyright from '../template/Copyright';
 import Chart from 'react-apexcharts'
-
-import PlaceHolder from '../../assets/img/floating-img.jpg';
 import useApiData from '../../hooks/useChartData';
 import useChart from '../../hooks/useChart';
 
@@ -25,24 +24,26 @@ export default function Eigth(){
             <>
                 <div className="page full-screen background">
                     <div className="shadow"></div>
-                    <div className="sidebar">
-                        <div className="wrap sidebar-float flex">
-                            <img src={PlaceHolder} alt="" />
-                        </div>
-                    </div>
-                    <div className="main">
-                        <div className="box light">
-                            <h2 className="title colored">Avoided CO&#8322; emissions: 280.21 t</h2>
-                            <h3 className="sub-title">Facq goes for renewable energy</h3>
-                            <div className="line"></div>
-                            <div className="wrap flex align-center">
+                    <div className="grid">
+                        <Sidebar title=""/>
+                        <div className="page__content">
+                            <div className="box light">
+                                <div className="box__header">
+                                    <h2 className="title colored">Anual Report</h2>
+                                    <h3 className="sub-title">This building produces solar energy!</h3>
+                                    <div className="line"></div>
+                                </div>
+                                
+                                <div className="wrap align-center">
 
-                                {!loading && <Chart options={options} series={series} type="bar" width={"100%"} height={'320'} /> }    
+                                    {!loading && <Chart options={options} series={series} type="bar" width={"100%"} height={'320'} /> }  
 
+                                    <Copyright />  
+
+                                </div>
+                                
                             </div>
-                            
                         </div>
-                        
                     </div>
                 </div>
             </>

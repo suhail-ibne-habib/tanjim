@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./components/pages/Home";
-import FirstPage from "./components/pages/FirstPage";
 import SecondPage from "./components/pages/SecondPage";
 import ThirdPage from "./components/pages/ThirdPage";
 import Fourth from "./components/pages/Fourth";
@@ -38,8 +37,7 @@ function App() {
     <Router>
       {/* <Nav /> */}
       <Routes>        
-        <Route path="/" element={<FirstPage />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/second-page" element={<SecondPage />} />
         <Route path="/third-page" element={<ThirdPage />} />
         <Route path="/fourth-page" element={<Fourth />} />
