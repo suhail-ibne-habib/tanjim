@@ -36,9 +36,6 @@ export default function NlFourthPage(){
                             <p className="box-note">100m&sup2; bos, met 80 bomen, verwijdert in een jaar ongevver een ton CO2 uit de lucht</p>
                         </div>
                         
-
-                        <p className="copyright">&copy;solarfox</p>
-                        
                     </div>
                     
                 </div>

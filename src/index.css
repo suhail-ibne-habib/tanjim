@@ -336,7 +336,7 @@ body {
 }
 
 .result{
-  width: clamp( 80%, 80%, 1200px );
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -562,10 +562,22 @@ body {
 }
 
 @media (min-width: 1000px) and (max-width: 1200px){
-  .clock{
-    width: 220px;
-    height: 220px;
+
+  .clock {
+    height: 190px;
+    width: 190px;
   }
+  .grid-3{
+      gap: 4px;
+  }
+  .space-50 {
+      margin-bottom: 15px;
+  }
+  
+  .details {
+    padding: 15px 30px
+  }
+
 }
 
 @media (min-width: 1200px){
@@ -608,10 +620,35 @@ body {
 }
 
 @media (max-width: 1600px) and (max-height: 800px){
-  .sidebar-float{
-    width: 38%;
-  }
+
   img.house-img, img.car-globe {
     width: 60% !important;
   }
+  .sidebar-float {
+    width: 38%;
+    bottom: clamp(60px,20px,60px);
+  }
+  
 }
+
+@media (max-height: 801px){
+
+  .clock-wrap {
+      height: 40%;
+  }
+
+}
+
+
+
+/* home page styling starts */
+.home .grid{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+

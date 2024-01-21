@@ -37,7 +37,6 @@ export default function NlSixthPage(){
 
                         <p className='mb-2'>ek van de aarde 40.074</p>
                         
-                        <p className="copyright">&copy;solarfox</p>
                     </div>
                     
                 </div>

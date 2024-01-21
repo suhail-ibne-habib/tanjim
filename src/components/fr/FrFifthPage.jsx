@@ -35,7 +35,6 @@ export default function FrFifthPage(){
                                 Ménage de 3 personnes 4 kWh par an (100 m&sup2; de surface habitable)</p>
                         </div>
                         
-                        <p className="copyright">&copy;solarfox</p>
                     </div>
                     
                 </div>

@@ -36,8 +36,7 @@ export default function Sixth(){
                         </div>
 
                         <p className='mb-2'>I of the earth 40.074</p>
-                        
-                        <p className="copyright">&copy;solarfox</p>
+
                     </div>
                     
                 </div>

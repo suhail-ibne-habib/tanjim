@@ -35,7 +35,6 @@ export default function Fourth(){
                                 3-person household 4 kWh per year (100 m&sup2; living space)</p>
                         </div>
                         
-                        <p className="copyright">&copy;solarfox</p>
                     </div>
                     
                 </div>

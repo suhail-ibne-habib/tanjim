@@ -36,7 +36,7 @@ export default function SecondPage(){
                                 )
                             } )}
                         </div>
-                        <p className="copyright">&copy;solarfox</p>
+                        
                     </div>
                     
                 </div>

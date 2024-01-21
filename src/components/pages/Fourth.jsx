@@ -36,9 +36,6 @@ export default function Fourth(){
                             <p className="box-note">100m&sup2; of forest, with 80 trees, removes approximately one ton of CO&#8322; from the air in a year</p>
                         </div>
                         
-
-                        <p className="copyright">&copy;solarfox</p>
-                        
                     </div>
                     
                 </div>

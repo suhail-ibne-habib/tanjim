@@ -36,9 +36,6 @@ export default function FrFourthPage(){
                             <p className="box-note">100 m&sup2; de forêt, avec 80 arbres, éliminent environ une tonne de CO2 de l'air en un an</p>
                         </div>
                         
-
-                        <p className="copyright">&copy;solarfox</p>
-                        
                     </div>
                     
                 </div>

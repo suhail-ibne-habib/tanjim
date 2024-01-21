@@ -36,7 +36,7 @@ export default function FrThirdPage(){
                                 )
                             } )}
                         </div>
-                        <p className="copyright">&copy;solarfox</p>
+                        
                     </div>
                     
                 </div>

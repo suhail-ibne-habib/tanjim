@@ -35,7 +35,6 @@ export default function NlFifthPage(){
                             3-persoonshuishouden 4 kWh per jaar(100 m&sup2; leefruimte)</p>
                         </div>
                         
-                        <p className="copyright">&copy;solarfox</p>
                     </div>
                     
                 </div>

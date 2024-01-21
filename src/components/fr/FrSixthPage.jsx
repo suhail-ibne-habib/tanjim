@@ -37,7 +37,6 @@ export default function FrSixthPage(){
 
                         <p className='mb-2'>Moi de la terre 40.074</p>
                         
-                        <p className="copyright">&copy;solarfox</p>
                     </div>
                     
                 </div>

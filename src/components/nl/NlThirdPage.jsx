@@ -37,7 +37,7 @@ export default function NlThirdPage(){
                                 )
                             } )}
                         </div>
-                        <p className="copyright">&copy;solarfox</p>
+                        
                     </div>
                     
                 </div>
